@@ -53,9 +53,9 @@ public class EmployeeService{
         employeeRepository.save(employee);
     }
     
-    public void saveRegistration(Employee employee){
-        employeeRepository.save(employee);
-    }
+//    public void saveRegistration(Employee employee){
+//        employeeRepository.save(employee);
+//    }
     
 //    public void saveRegistration(String employeeName, Date birthDate, String gender, 
 //            String email, String phone, String linkedin, Village villageId, Major majorId, 
