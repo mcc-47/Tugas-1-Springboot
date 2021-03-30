@@ -58,10 +58,10 @@ public class DistrictService {
     }
     
     //Update
-    public void updateDistrictName(Integer id, String name){
+    public Districts updateDistrictName(Integer id, String name){
         Districts district = districtRepository.findById(id).get();
         district.setDistrictName(name);
-        districtRepository.save(district);
+        return districtRepository.save(district);
     }
     
     //Delete
