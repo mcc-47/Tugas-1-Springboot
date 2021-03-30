@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Employee Management System</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Employee Management System</h1>
+            <hr>
+            <h2>Save Employee</h2>
+
+            <form action="#" th:action="@{/saveEmployee}" th:object="${employee}" method="POST">
+                <input type="text" th:field="*{employeeName}" placeholder="Employee Name" class="form-control mb-4 col-4">
+                <input type="date" th:field="*{birthDate}" placeholder="Employee Birth Date" class="form-control mb-4 col-4">
+                <input class="form-check-input mt-2 col-2" type="radio" name="gender" id="Laki-laki" value="Laki-laki">
+                <label class="form-check-label mb-4 col-2" for="Laki-laki">Laki-laki</label>
+                <input class="form-check-input mt-2 col-2" type="radio" name="gender" id="Perempuan" value="Perempuan">
+                <label class="form-check-label mb-4 col-2" for="Perempuan">Perempuan</label>
+                <input type="email" th:field="*{email}" placeholder="Employee Email" class="form-control mb-4 col-4">
+                <button type="submit" class="btn btn-info col-2">Save Employee</button>
+            </form>
+
+            <hr>
+
+            <a th:href="@{/}"> Back to Employee List</a>
+        </div>
+    </body>
+</html>
