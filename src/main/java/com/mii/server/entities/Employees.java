@@ -66,6 +66,18 @@ public class Employees implements Serializable {
     public Employees() {
     }
 
+    public Employees(String prefix, Integer employeeId, String employeeName, Date birthDate, String gender, String email, Addresses addresses, Educations educations, Contacts contacts) {
+        this.prefix = prefix;
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+        this.birthDate = birthDate;
+        this.gender = gender;
+        this.email = email;
+        this.addresses = addresses;
+        this.educations = educations;
+        this.contacts = contacts;
+    }
+
     public Employees(Integer employeeId) {
         this.employeeId = employeeId;
     }

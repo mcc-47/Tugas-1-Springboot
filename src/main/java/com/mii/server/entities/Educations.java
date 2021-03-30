@@ -56,11 +56,14 @@ public class Educations implements Serializable {
     public Educations() {
     }
 
-    public Educations(String prefix, Integer educationId) {
+    public Educations(String prefix, Integer educationId, Majors majorId, Universities universityId) {
         this.prefix = prefix;
         this.educationId = educationId;
-    }  
+        this.majorId = majorId;
+        this.universityId = universityId;
+    }
 
+    
     public Educations(Integer educationId) {
         this.educationId = educationId;
     }

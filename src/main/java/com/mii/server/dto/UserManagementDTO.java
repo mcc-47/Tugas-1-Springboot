@@ -5,6 +5,7 @@
  */
 package com.mii.server.dto;
 
+import com.mii.server.entities.Addresses;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -72,6 +73,10 @@ public class UserManagementDTO {
         this.majorName = majorName;
         this.universityId = universityId;
         this.universityName = universityName;
+    }
+
+    public UserManagementDTO(Integer employeeId, String employeeName, Addresses addresses, Date birthDate, String gender, String email) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getPrefix() {
