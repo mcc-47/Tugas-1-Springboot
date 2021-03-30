@@ -1,0 +1,13 @@
+Terdapat 2 controller yang digunakan.
+1. UserController
+- Berisi controller untuk CRUD province dan district.
+- Service berada di file ProvinceService dan DistrictService
+
+2. UserManagement
+- Berisi controller untuk registrasi employee
+- ada juga controller untuk get data employee to province, dan get all
+- Service berada di file userService
+- Controller sendEmail itu percobaan sendEmail
+- Controller registrationMail itu untuk mengirimkan email konfirmasi ketika
+  user berhasil registrasi
+- Service untuk email berada di file notificationService
