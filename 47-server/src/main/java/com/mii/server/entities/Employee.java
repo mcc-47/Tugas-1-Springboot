@@ -34,6 +34,9 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Employee.findAll", query = "SELECT e FROM Employee e")})
 public class Employee implements Serializable {
 
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "employee", fetch = FetchType.LAZY)
+    private Users users;
+
     private static final long serialVersionUID = 1L;
     @Basic(optional = false)
     @Column(name = "prefix")
@@ -186,6 +189,14 @@ public class Employee implements Serializable {
     @Override
     public String toString() {
         return "com.mii.server.entities.Employee[ employeeId=" + employeeId + " ]";
+    }
+
+    public Users getUsers() {
+        return users;
+    }
+
+    public void setUsers(Users users) {
+        this.users = users;
     }
     
 }
