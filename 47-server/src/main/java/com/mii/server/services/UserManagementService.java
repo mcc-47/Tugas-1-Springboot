@@ -27,6 +27,7 @@ public class UserManagementService {
     @Autowired
     UserManagementRepository userManagementRepository;
     
+    
     //Create data for Multiple Table
     public Employees insertData(UserManagementDTO userManagementDTO) {
         Employees reg = new Employees(
@@ -62,4 +63,6 @@ public class UserManagementService {
         );
         return userManagementRepository.save(reg);
     }
+    
+    
 }

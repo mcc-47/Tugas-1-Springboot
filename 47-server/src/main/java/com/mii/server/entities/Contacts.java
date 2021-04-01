@@ -55,7 +55,7 @@ public class Contacts implements Serializable {
 
     public Contacts(Integer contactId) {
         this.contactId = contactId;
-    }
+    } 
 
     public Contacts(Integer contactId, String phone, String linkedin, String prefix) {
         this.contactId = contactId;
@@ -70,8 +70,6 @@ public class Contacts implements Serializable {
         this.linkedin = linkedin;
         this.prefix = prefix;
     }
-    
-    
 
         
 
