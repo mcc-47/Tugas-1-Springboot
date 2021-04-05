@@ -27,9 +27,6 @@ public class EmployeeService {
     @Autowired
     EmployeeRepository employeerepository;
     
-//    @Autowired
-//    AddressRepository addressRepository;
-
     public EmployeeService() {
     }
 
@@ -102,8 +99,29 @@ public class EmployeeService {
         return employeerepository.save(employee);
     }
     
-    //by address
-//    public Addresses insertByAddress(Addresses address){
-//        return addressRepository.save(address);
-//    }
+    // buat Client-App
+    public List<Employees> listAll(){
+        return employeerepository.findAll();
+    }
+    
+    public Employees getById(Integer employeeId){
+        return employeerepository.findById(employeeId).get();
+    }
+    
+    public void delete(Integer employeeId){
+        employeerepository.deleteById(employeeId);
+    }
+    
+    public Employees update(Integer employeeId, Employees employees){
+        Employees newEmp = employeerepository.findById(employeeId).get();
+        newEmp.setEmployeeName(employees.getEmployeeName());
+        newEmp.setBirthDate(employees.getBirthDate());
+        newEmp.setGender(employees.getGender());
+        newEmp.setEmail(employees.getEmail());
+        return employeerepository.save(newEmp);
+    }
+    
+    public Employees create(Employees employee){
+        return employeerepository.save(employee);
+    }
 }

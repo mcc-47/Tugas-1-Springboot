@@ -5,7 +5,7 @@
  */
 package com.entities;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -56,13 +56,16 @@ public class Employees implements Serializable {
     @Column(name = "email")
     private String email;
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "employees", fetch = FetchType.LAZY)
-//    @JsonBackReference
+    @Basic(optional = true)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Addresses addresses;
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "employees", fetch = FetchType.LAZY)
-//    @JsonBackReference
+    @Basic(optional = true)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Educations educations;
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "employees", fetch = FetchType.LAZY)
-//    @JsonBackReference
+    @Basic(optional = true)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Contacts contacts;
 
     public Employees() {
